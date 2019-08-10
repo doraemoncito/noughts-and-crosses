@@ -1,0 +1,6 @@
+org.doraemoncito.rlplayer.players.FixedPlayer
+org.doraemoncito.rlplayer.players.RandomPlayer
+org.doraemoncito.rlplayer.players.ObservingPlayer
+org.doraemoncito.rlplayer.players.QLearningPlayer
+org.doraemoncito.rlplayer.players.SymmetricPlayer
+org.doraemoncito.rlplayer.players.ObservingSymmetricPlayer
