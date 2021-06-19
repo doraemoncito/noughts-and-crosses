@@ -39,7 +39,7 @@ unreachable and further limit the total number of possible board states.
 From combinatorial mathematics we know that the number of [k permutations with repetition of n](https://en.wikipedia.org/wiki/Permutation#Permutations_with_repetition) elements, in other words, arrangements of a fixed length k of elements taken from a given set of size n,
 is given by the following equation:
 
-![P_{n,k}=k^{n}](images/equation-permutations.svg)
+![P_{n,k}=k^{n}](images/equation-permutations.png)
 
 Therefore, grouping the two different game pieces and the empty space in sets of 9, results in 19683 board states.
 
