@@ -39,18 +39,18 @@ unreachable and further limit the total number of possible board states.
 From combinatorial mathematics we know that the number of [k permutations with repetition of n](https://en.wikipedia.org/wiki/Permutation#Permutations_with_repetition) elements, in other words, arrangements of a fixed length k of elements taken from a given set of size n,
 is given by the following equation:
 
-![P_{n,k}=k^{n}](images/equation-permutations.png)
+![P_{n,k}=k^{n}](images/equation-permutations.svg)
 
-Therefore, grouping the two different game pieces and the empty sapce in sets of 9, results in 19683 board states.
+Therefore, grouping the two different game pieces and the empty space in sets of 9, results in 19683 board states.
 
 Note that we can still significantly reduce the size of the matrix required by removing board states
-that amount to piece swaps as described above but this complicates data manipulation unnecessarily
+that amount to piece swaps as described above but this complicates data manipulation unnecessarily,
 so we will settle for a board size of 19683 states by 9 actions.
 
 In order to allow storage of rewards relative to board position and actions, the software design
 incorporates a hash function which to allow us to index the state-action table.  Given that we can
-think of the tic-tac-toe board as being a set of 9 boxes any of which can carry one of three
-elements, we can think of a hash function as being a base three converted for a nine digit number.
+think of the tic-tac-toe board as a set of 9 boxes any of which can carry one of three
+elements, we can also think of a hash function as a base-three converted for a nine-digit number.
 This hash function based on a simple eight degree polynomial which translates base-3 board
 states into base-10 indices:
 
@@ -63,7 +63,7 @@ The Q-Learning algorithm has been implemented using the non-deterministic equati
 
 The simplest learning player implemented here looks only at its own reward to update Q. For the
 purpose of this exercise we can take s’ and a’ to be the state and action values before or after the
-opponent moves. For simplicity we have chosen a two stage update method where the player stores both
+opponent moves. For simplicity, we have chosen a two stage update method where the player stores both
 its own and the opponent’s move but only considers its own rewards.  This ensures continuity in the
 updates and allows Q values to be propagated back more effectively.
 
@@ -92,7 +92,7 @@ those players that fill up the board quickest.
 
 ### Playing against a fixed player
 
-A test league was run using a player with a fixed strategy which consisted of picking the next
+We run a test league using a player with a fixed strategy which consisted of picking the next
 available slot in the board from left to right and top to bottom.  Unsurprisingly all players were
 able to learn the target policy very quickly and consistently win every single game. It is however
 worth noting that setting an initial value for *k* that is too high (i.e. *0.1*) can result in
@@ -119,7 +119,10 @@ factor of eight leads to an over-simplification of state-action table.
 
 ## Notes
 
-The equations presented in this article have been rendered using [CodeCogs](https://latex.codecogs.com/eqneditor/editor.php).
+The equations presented in this article have been rendered using:
+- [CodeCogs](https://latex.codecogs.com/eqneditor/editor.php)
+- [LaTeX to SVG](https://viereck.ch/latex-to-svg/)
+- [MathJax](https://www.mathjax.org/) 
 
 ## References
 
