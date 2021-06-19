@@ -4,7 +4,7 @@
 
 Java implementation of a reinforcement learning agent that plays noughts and crosses (tic-tac-toe).
 
-Copyright (c) 2003-2019 Jose Hernandez
+Copyright (c) 2003-2021 Jose Hernandez
 
 Some portions of the referee code are based on code originally developed by Jim Farrand.
 
